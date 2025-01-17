@@ -20,9 +20,7 @@ export default function Page() {
     setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
+
 
   return (
     <section className="bg-gray-100 dark:bg-gray-900 min-h-screen py-16 px-8">

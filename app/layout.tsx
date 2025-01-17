@@ -1,8 +1,9 @@
 'use client';
-import type { Metadata } from 'next';
 import './globals.css';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+
 
 export default function RootLayout({
   children,
@@ -21,14 +22,14 @@ export default function RootLayout({
         {/* Navigation Bar */}
         <nav className="bg-white border-gray-200 dark:bg-gray-900">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+            <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
               <Image
                 src="/avatar_hello.png"
                 alt="Logo"
                 width={65}
                 height={65}
               />
-            </a>
+            </Link>
             <button
               data-collapse-toggle="navbar-default"
               type="button"
@@ -56,24 +57,24 @@ export default function RootLayout({
             <div className="hidden w-full md:block md:w-auto" id="navbar-default">
               <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
-                  <a href="/" className={linkClasses('/')}>
+                  <Link href="/" className={linkClasses('/')}>
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/myself" className={linkClasses('/myself')}>
+                  <Link href="/myself" className={linkClasses('/myself')}>
                     About Me
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/internship" className={linkClasses('/internship')}>
+                  <Link href="/internship" className={linkClasses('/internship')}>
                     Internship
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/projects" className={linkClasses('/projects')}>
+                  <Link href="/projects" className={linkClasses('/projects')}>
                     Other Projects
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -91,16 +92,16 @@ export default function RootLayout({
             </span>
             <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
               <li>
-                <a href="https://www.linkedin.com/in/emmanuel-akpandara-54472b229/" target="_blank" rel="noopener noreferrer" className="hover:underline me-4 md:me-6">LinkedIn</a>
+                <Link href="https://www.linkedin.com/in/emmanuel-akpandara-54472b229/" target="_blank" rel="noopener noreferrer" className="hover:underline me-4 md:me-6">LinkedIn</Link>
               </li>
               <li>
-                <a href="mailto:emzz.akp@gmail.com" className="hover:underline me-4 md:me-6">Email</a>
+                <Link href="mailto:emzz.akp@gmail.com" className="hover:underline me-4 md:me-6">Email</Link>
               </li>
               <li>
-                <a href="https://github.com/emmanuel-akpandara" target="_blank" rel="noopener noreferrer" className="hover:underline me-4 md:me-6">GitHub</a>
+                <Link href="https://github.com/emmanuel-akpandara" target="_blank" rel="noopener noreferrer" className="hover:underline me-4 md:me-6">GitHub</Link>
               </li>
               <li>
-                <a href="tel:+1234567890" className="hover:underline">Phone: +32467832910</a>
+                <Link href="tel:+1234567890" className="hover:underline">Phone: +32467832910</Link>
               </li>
             </ul>
           </div>
