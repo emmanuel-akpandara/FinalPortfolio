@@ -1,0 +1,112 @@
+'use client';
+import type { Metadata } from 'next';
+import './globals.css';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const pathname = usePathname();
+  const linkClasses = (path: string) =>
+    pathname === path
+      ? 'block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500'
+      : 'block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent';
+
+  return (
+    <html lang="en">
+      <body>
+        {/* Navigation Bar */}
+        <nav className="bg-white border-gray-200 dark:bg-gray-900">
+          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+              <Image
+                src="/avatar_hello.png"
+                alt="Logo"
+                width={65}
+                height={65}
+              />
+            </a>
+            <button
+              data-collapse-toggle="navbar-default"
+              type="button"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-default"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Open main menu</span>
+              <svg
+                className="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+            <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                  <a href="/" className={linkClasses('/')}>
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="/myself" className={linkClasses('/myself')}>
+                    About Me
+                  </a>
+                </li>
+                <li>
+                  <a href="/internship" className={linkClasses('/internship')}>
+                    Internship
+                  </a>
+                </li>
+                <li>
+                  <a href="/projects" className={linkClasses('/projects')}>
+                    Other Projects
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        {/* Main Content */}
+        <main>{children}</main>
+
+        {/* Footer */}
+        <div className="bg-white border-gray-200 dark:bg-gray-900 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+            <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+              © 2025 Emmanuel Akpandara. All Rights Reserved.
+            </span>
+            <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+              <li>
+                <a href="https://www.linkedin.com/in/emmanuel-akpandara-54472b229/" target="_blank" rel="noopener noreferrer" className="hover:underline me-4 md:me-6">LinkedIn</a>
+              </li>
+              <li>
+                <a href="mailto:emzz.akp@gmail.com" className="hover:underline me-4 md:me-6">Email</a>
+              </li>
+              <li>
+                <a href="https://github.com/emmanuel-akpandara" target="_blank" rel="noopener noreferrer" className="hover:underline me-4 md:me-6">GitHub</a>
+              </li>
+              <li>
+                <a href="tel:+1234567890" className="hover:underline">Phone: +32467832910</a>
+              </li>
+            </ul>
+          </div>
+     
+        </div>
+      </body>
+    </html>
+  );
+}
