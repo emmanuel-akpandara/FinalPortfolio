@@ -29,8 +29,7 @@ export default function Page() {
           Water Level Monitoring Web App
         </h1>
         <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-          Collaborated in a 6-member team to monitor water levels in Flanders for CIPAL, using sensor data from waterinfo.be APIs processed with Node-RED and visualized through Grafana. Developed a Streamlit app enabling users to sign up, view water levels on charts, set thresholds for alerts, and manage sensor setup files with Firebase.
-          </p><br />
+          Collaborated in a 6-member team to monitor water levels in Flanders for CIPAL, using sensor data from waterinfo.be APIs processed with Node-RED and visualized through Grafana. I was in charge of developing the Streamlit app enabling users to sign up, view water levels on charts, set thresholds for alerts, and manage sensor setup files with Firebase with the help of other team members</p><br />
           <div className="flex space-x-4 mt-4">
           <Link target='_blank' className="inline-flex items-center px-6 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded-md" href="https://github.com/emmanuel-akpandara/WaterLevelProject">
             More on My Github

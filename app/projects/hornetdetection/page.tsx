@@ -48,6 +48,8 @@ export default function Page() {
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Solution</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           In a team of 3, we developed a local computer vision application on Streamlit using YOLO for object detection to detect and track hornets.
+          <br></br>
+          I led the model training and evaluation on this dataset, while other team members focused on preprocessing. 
         </p>
 
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Technologies Used</h2>

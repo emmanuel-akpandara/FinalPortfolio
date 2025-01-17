@@ -6,35 +6,30 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/page": [
+    "/projects/hornetdetection/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/projects/hornetdetection/page.js"
     ],
     "/projects/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/projects/page.js"
     ],
-    "/projects/hornetdetection/page": [
+    "/internship/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/projects/hornetdetection/page.js"
+      "static/chunks/app/internship/page.js"
     ],
-    "/myself/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/myself/page.js"
+      "static/chunks/app/page.js"
     ],
     "/projects/waterapp/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/projects/waterapp/page.js"
-    ],
-    "/internship/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/internship/page.js"
     ]
   }
 }
