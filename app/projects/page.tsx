@@ -10,7 +10,7 @@ return (
       My Work In Action
     </h1>
     <p className="mt-4 text-gray-600 dark:text-gray-300">
-    Here’s a selection of some projects I've developed, blending software engineering and data science
+    Here&apos;s a selection of some projects I&apos;ve developed, blending software engineering and data science
     </p>
     <p className="mt-4 text-gray-600 dark:text-gray-300">
     These projects highlight my technical skills, problem-solving abilities, and passion for creating meaningful solutions
